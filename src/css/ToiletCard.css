@@ -25,13 +25,12 @@
 
 .WeatherLeft-board,
 .ToiletRight-board {
-  border: 1px solid #28a2a2;
-  box-shadow: 0.15rem 0.15rem 0.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0.15rem 0.15rem 0.5rem rgba(255, 255, 255, 0.1);
   padding: 2rem;
   text-align: center;
   animation: horizontalFlipIn 1s;
   border-radius: 3px;
-  background-color: white;
+  background-color: #252525;
   align-items: center;
   justify-content: center;
 }

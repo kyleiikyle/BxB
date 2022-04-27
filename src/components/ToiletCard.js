@@ -2,9 +2,7 @@ import React, { Component } from "react"
 import "../css/ToiletCard.css"
 import "../css/weather-icons.min.css"
 
-if (localStorage.getItem("lastCheck") == null) {
-  alert("Item does not exist");
-}
+
 class WeatherBoards extends Component {
 
     componentDidMount() {
@@ -23,8 +21,7 @@ class WeatherBoards extends Component {
           </div>
           
           <h2 style={{fontSize: '20px'}} className="ToiletCard-city">
-            Here at BlendxBatch we pride ourselves in the clenliness of our facilities. If our restrooms are not up to you standards please informan a member of staff of press the check button the the right of this text.
-          </h2>
+          Here at BlendxBatch we pride ourselves on the cleanliness of our facilities. If our restrooms are not up to your standards, please inform a member of staff or press the check button to the right of this text.          </h2>
 
         </div>
 
@@ -45,7 +42,7 @@ class WeatherBoards extends Component {
           <div className="ToiletCard-detail-left">
 
             <div>
-              <h2>Last Toilet Check</h2>
+              <h2 onDoubleClick={() => alert('kyle')}>Last Toilet Check</h2>
               <br>
               </br>
               <h2>{localStorage.getItem("lastCheck")}</h2>
