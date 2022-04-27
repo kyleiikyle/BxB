@@ -35,7 +35,7 @@ class WeatherBoards extends Component {
             <div>
               {/* <button className="CheckButton" onClick={() => console.log(new Date().toLocaleTimeString('en-GB', {hour: '2-digit', minute:'2-digit'}))}> CHECK</button> */}
               {/* <button className="CheckButton" onClick={localStorage.setItem('items',(new Date().toLocaleTimeString('en-GB', {hour: '2-digit', minute:'2-digit'})))}> CHECK</button> */}
-              <button className="CheckButton" onClick={con()  }>CHECK</button>
+              <button className="CheckButton">CHECK</button>
 
 
             </div>

@@ -85,6 +85,8 @@
   width: 200px;
   border-radius: 100px;
   font-size: 50px;
+  align-self: stretch;
+  text-align: center;
 }
 
 .ToiletCard-detail-left{
