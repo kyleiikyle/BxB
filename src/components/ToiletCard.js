@@ -1,13 +1,29 @@
 import React, { Component } from "react"
 import "../css/ToiletCard.css"
 import "../css/weather-icons.min.css"
+import Swal from 'sweetalert2'
 
-function myFunction() {
-  let person = prompt("Staff Member Name", "Staff Name");
-  console.log(person)
-  localStorage.setItem(new Date(), person)
+async function toiletCheck(){
+  const { value: formValues } = await Swal.fire({
+    title: 'Summary',
+    inputLabel: 'Your email address',
+    html:
+      '<input id="swal-input1" class="swal2-input" value="Staff Name">' +
+      '<input id="swal-input2" class="swal2-input" value="Notes? (Optional)">',
+    focusConfirm: false,
+    preConfirm: () => {
+      return [
+        document.getElementById('swal-input1').value,
+        document.getElementById('swal-input2').value
+      ]
+    }
+    
+  })
+  localStorage.setItem('test', formValues + new Date())
   localStorage.setItem('lastCheck',(new Date().toLocaleTimeString('en-GB', {hour: '2-digit', minute:'2-digit'})))
+
 }
+
 
 class WeatherBoards extends Component {
 
@@ -46,7 +62,7 @@ class WeatherBoards extends Component {
           <div className="ToiletCard-detail-left">
 
             <div>
-              <h2 onDoubleClick={() => myFunction()}>Last Toilet Check</h2>
+              <h2 onDoubleClick={() => toiletCheck()}>Last Toilet Check</h2>
               <br>
               </br>
               <h2>{localStorage.getItem("lastCheck")}</h2>
