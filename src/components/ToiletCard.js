@@ -2,8 +2,11 @@ import React, { Component } from "react"
 import "../css/ToiletCard.css"
 import "../css/weather-icons.min.css"
 
-function con(){
-  console.log('kyle')
+function myFunction() {
+  let person = prompt("Staff Member Name", "Staff Name");
+  console.log(person)
+  localStorage.setItem(new Date(), person)
+  localStorage.setItem('lastCheck',(new Date().toLocaleTimeString('en-GB', {hour: '2-digit', minute:'2-digit'})))
 }
 
 class WeatherBoards extends Component {
@@ -33,9 +36,7 @@ class WeatherBoards extends Component {
           <div className="ToiletCard-detail">
 
             <div>
-              {/* <button className="CheckButton" onClick={() => console.log(new Date().toLocaleTimeString('en-GB', {hour: '2-digit', minute:'2-digit'}))}> CHECK</button> */}
-              {/* <button className="CheckButton" onClick={localStorage.setItem('items',(new Date().toLocaleTimeString('en-GB', {hour: '2-digit', minute:'2-digit'})))}> CHECK</button> */}
-              <button className="CheckButton">CHECK</button>
+              <button className="CheckButton" >CHECK</button>
 
 
             </div>
@@ -45,7 +46,7 @@ class WeatherBoards extends Component {
           <div className="ToiletCard-detail-left">
 
             <div>
-              <h2 onDoubleClick={() => localStorage.setItem('lastCheck',(new Date().toLocaleTimeString('en-GB', {hour: '2-digit', minute:'2-digit'})))}>Last Toilet Check</h2>
+              <h2 onDoubleClick={() => myFunction()}>Last Toilet Check</h2>
               <br>
               </br>
               <h2>{localStorage.getItem("lastCheck")}</h2>
