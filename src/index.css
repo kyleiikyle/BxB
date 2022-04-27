@@ -17,6 +17,8 @@ body {
 
 button {
   cursor: pointer;
+  font-family: Lato, sans-serif;
+  color: black;
 }
 
 p, li {
