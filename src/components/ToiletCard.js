@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "../css/ToiletCard.css"
 import "../css/weather-icons.min.css"
+import Swal from 'sweetalert2'
 
 async function toiletCheck(){
   const { value: formValues } = await Swal.fire({
