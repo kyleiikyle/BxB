@@ -19,6 +19,7 @@ button {
   cursor: pointer;
   font-family: Lato, sans-serif;
   color: black;
+  text-align: center;
 }
 
 p, li {
