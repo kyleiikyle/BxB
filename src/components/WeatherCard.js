@@ -28,6 +28,12 @@ class WeatherBoards extends Component {
     this.props.callBackFromParent(existingCities)
   }
 
+    componentDidMount() {
+    setInterval(() => {
+     this.setState({time: Date.now()})    
+    }, 1000)
+  }
+
   render() {
     const {
       city,

@@ -16,7 +16,7 @@
 
 .WeatherBoards {
   grid-template-columns: 20rem auto;  
-  padding: 8px;
+  padding: 10px;
   margin: auto;
 }
 

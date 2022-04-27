@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import "./css/App.css"
 
 import WeatherCard from "./components/WeatherCard"
+import ToiletCard from "./components/ToiletCard"
 import API_KEY from "./config.js"
 
 class App extends Component {
@@ -62,6 +63,11 @@ class App extends Component {
       return response
     }
   }
+  // componentDidMount() {
+  //   setInterval(() => {
+  //    this.setState({time: Date.now()})    
+  //   }, 1000)
+  // }
 
   updateSavedCities(cityArr) {
     // hasCities is set to true if length is more than 0, otherwise false
@@ -121,7 +127,7 @@ class App extends Component {
           />
         )}
                 {searchDone && (
-          <WeatherCard
+          <ToiletCard
             weatherData={weatherData}
             savedCities={savedCities}
             callBackFromParent={this.updateSavedCities}

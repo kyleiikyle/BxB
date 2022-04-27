@@ -1,0 +1,93 @@
+.ToiletBoards,
+.ToiletRight-board {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2em;
+}
+
+/* .ToiletRight-board > div {
+  display: grid;
+  grid-template-columns: 8rem 6rem;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+} */
+
+.ToiletBoards {
+  grid-template-columns: 20rem auto;  
+  padding: 8px;
+  margin: auto;
+}
+
+.ToiletRight-board {
+  width: 45rem;
+}
+
+.WeatherLeft-board,
+.ToiletRight-board {
+  border: 1px solid #28a2a2;
+  box-shadow: 0.15rem 0.15rem 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  animation: horizontalFlipIn 1s;
+  border-radius: 3px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.ToiletCard-icon-container {
+  font-size: 4.5rem;
+  margin: 2rem 0 0;
+}
+
+.ToiletCard-icon {
+  margin: 0 0 2rem;
+}
+
+.ToiletCard-degrees {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.ToiletBoards .ui.positive.button {
+  background-color: #28a2a2;
+}
+
+.ToiletCard-detail {
+  padding: 10px;
+  width: 20rem;
+}
+/* .ToiletCard-detail > div > p {
+  font-size: 1.4rem;
+} */
+
+.des{
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  line-height: 1.28571429em;
+  margin: calc(2rem - 0.14285714em) 0 1rem;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.ToiletTitle {
+  display: grid;
+  grid-template-columns: none;
+  height: 4rem;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.CheckButton{
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  font-size: 50px;
+}
+
+.ToiletCard-detail-left{
+  padding-bottom: 84px;
+}
